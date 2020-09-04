@@ -8,12 +8,16 @@ jobs:
         steps:
             - checkout
             - run:
+                  name: Install Serverless
                   command: sudo npm i -g serverless npm@latest
             - run:
+                  name: Install npm
                   command: npm install
             - run:
+                  name: AWS credentials CircleCI profile
                   command: ./.circleci/install-credentials.sh
             - run:
+                  name: Serverless deploy
                   command: sls deploy
 
 workflows:
