@@ -63,8 +63,15 @@ functions:
   api:
     handler: handler.hello
     events:
-      - http: ANY {proxy+}
-      - http: ANY /
+      -  http: 
+          path: "/"
+          method: get 
+  api:
+    handler: handler.simple
+    events:
+      -  http: 
+          path: simple
+          method: get     
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
