@@ -23,6 +23,8 @@ service: myservice
 provider:
   name: aws
   runtime: nodejs12.x
+  profile: CircleCI
+  region: us-east-2
 
 # you can overwrite defaults here
 #  stage: dev
