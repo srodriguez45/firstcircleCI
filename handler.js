@@ -5,10 +5,15 @@ module.exports.hello = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
-        input: event,
+        msg: 'Serverless running from CircleCI deploy',
+        info: {
+          path: event.path,
+          method: event.httpMethod
+        }
       },
-      null,
+      {
+        data: 'body from cricleci deploy!!!'
+      },
       2
     ),
   };
