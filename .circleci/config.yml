@@ -9,8 +9,7 @@ jobs:
             - checkout
             - run:
                   name: Install Serverless
-                  #command: sudo npm i -g serverless npm@latest
-                  command: npm i serverless --save-dev
+                  command: sudo npm i -g serverless npm@latest
             - run:
                   name: Install npm
                   command: npm install
