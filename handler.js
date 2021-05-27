@@ -8,6 +8,7 @@ module.exports.hello = async event => {
         msg: 'Serverless running from CircleCI deploy',
         info: {
           path: event.path,
+          comment: 'description lambda info',
           method: event.httpMethod
         }
       },
